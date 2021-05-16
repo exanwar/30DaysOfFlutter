@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:mtechviral/home_page.dart';
+import 'package:flutter/services.dart';
+import 'package:mtechviral/pages/home_page.dart';
+import 'package:mtechviral/pages/login_page.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(statusBarColor: Colors.transparent));
   runApp(MyApp());
 }
 
@@ -25,6 +29,17 @@ class MyApp extends StatelessWidget {
     // //! const can not change but final can modified. Like a const list can cot add more data but final list can to add more
     // final data = [];
 
-    return MaterialApp(debugShowCheckedModeBanner: false, home: HomePage());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      themeMode: ThemeMode.light,
+
+      //For Light Theme
+      theme: ThemeData(),
+
+      //for Dark Theme Mode
+      darkTheme: ThemeData(brightness: Brightness.dark),
+      initialRoute: '/',
+      routes: {"/": (context) => LoginPage(), "/home": (context) => HomePage()},
+    );
   }
 }
