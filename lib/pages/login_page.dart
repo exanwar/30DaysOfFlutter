@@ -61,9 +61,12 @@ class _LoginPageState extends State<LoginPage> {
           child: SafeArea(
             child: Column(
               children: [
-                SvgPicture.asset(
-                  'assets/images/undraw_hey_email_liaa.svg',
-                  height: 300,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: SvgPicture.asset(
+                    'assets/images/undraw_hey_email_liaa.svg',
+                    height: 300,
+                  ),
                 ),
                 SizedBox(height: 20.0),
                 Text(

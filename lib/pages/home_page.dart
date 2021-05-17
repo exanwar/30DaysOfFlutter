@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mtechviral/widgets/drawer.dart';
 
 class HomePage extends StatelessWidget {
   final int days = 30;
@@ -7,21 +8,18 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          brightness:
-              (MediaQuery.of(context).platformBrightness == Brightness.dark)
-                  ? Brightness.light
-                  : Brightness.dark,
-          title: Text('Catalog App')),
-      body: Center(
-        child: Container(
-          child: Text('Welcome to $days days of flutter by $name'),
+        appBar: AppBar(
+            brightness:
+                (MediaQuery.of(context).platformBrightness == Brightness.dark)
+                    ? Brightness.light
+                    : Brightness.dark,
+            title: Text('Catalog App')),
+        body: Center(
+          child: Container(
+            child: Text('Welcome to $days days of flutter by $name'),
+          ),
         ),
-      ),
-      drawer: Drawer(
-        child: Container(),
-      ),
-    );
+        drawer: MyDrawer());
   }
 
   // ! Methods
