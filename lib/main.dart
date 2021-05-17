@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:mtechviral/pages/home_page.dart';
 import 'package:mtechviral/pages/login_page.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -34,7 +35,9 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
 
       //For Light Theme
-      theme: ThemeData(),
+      theme: ThemeData(
+          primarySwatch: Colors.deepPurple,
+          fontFamily: GoogleFonts.lato().fontFamily),
 
       //for Dark Theme Mode
       darkTheme: ThemeData(brightness: Brightness.dark),
