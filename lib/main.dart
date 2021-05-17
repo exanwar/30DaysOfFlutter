@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:mtechviral/pages/home_page.dart';
 import 'package:mtechviral/pages/login_page.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mtechviral/utils/routes.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -41,8 +42,11 @@ class MyApp extends StatelessWidget {
 
       //for Dark Theme Mode
       darkTheme: ThemeData(brightness: Brightness.dark),
-      initialRoute: '/',
-      routes: {"/": (context) => LoginPage(), "/home": (context) => HomePage()},
+      initialRoute: MyRoutes.loginRoute,
+      routes: {
+        MyRoutes.loginRoute: (context) => LoginPage(),
+        MyRoutes.homeRoute: (context) => HomePage()
+      },
     );
   }
 }
