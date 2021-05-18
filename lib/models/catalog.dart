@@ -13,17 +13,28 @@ class Item {
       this.price,
       this.color,
       this.image});
+
+  factory Item.fromMap(Map<dynamic, dynamic> map) {
+    return Item(
+      id: map["id"],
+      name: map["name"],
+      description: map["description"],
+      price: map["price"],
+      color: map["color"],
+      image: map["image"],
+    );
+  }
+
+  toMap() => {
+        "id": id,
+        "name": name,
+        "description": description,
+        "price": price,
+        "color": color,
+        "image": image,
+      };
 }
 
 class CatalogModel {
-  static final items = [
-    Item(
-        id: 1,
-        name: "iPhone 12 Pro",
-        description: "Apple iPhone 12th generation",
-        price: 999,
-        color: "#33505A",
-        image:
-            "https://m-cdn.phonearena.com/images/phones/80751-940/Apple-iPhone-12-Pro.jpg")
-  ];
+  static List<Item> items;
 }

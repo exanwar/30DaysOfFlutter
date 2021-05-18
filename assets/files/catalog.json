@@ -1,0 +1,68 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "iPhone 12 Pro",
+            "description": "Apple iPhone 12th generation",
+            "price": 999,
+            "color": "#33505A",
+            "image": "https://m-cdn.phonearena.com/images/phones/80751-940/Apple-iPhone-12-Pro.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Pixel 5",
+            "description": "Google Pixel 5th generation",
+            "price": 699,
+            "color": "#00AC51",
+            "image": "https://specifications-pro.com/wp-content/uploads/2020/04/Google-Pixel-5-XL-1.jpg"
+        },
+        {
+            "id": 3,
+            "name": "M1 Macbook Air",
+            "description": "Apple Macbook air with apple silicon",
+            "price": 1099,
+            "color": "#E0BFAE",
+            "image": "https://cdn.wccftech.com/wp-content/uploads/2021/05/2021-MacBook-Air-concept-2.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Playstation 5",
+            "description": "Sony Playstation 5th generation",
+            "price": 500,
+            "color": "#544EE4",
+            "image": "https://www.startech.com.bd/image/cache/catalog/gaming-console/playstation/playstation-5/playstation-5-02-500x500.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Airpods Pro",
+            "description": "Apple Air Pods Pro 1st generation",
+            "price": 200,
+            "color": "#E3E4E9",
+            "image": "https://www.startech.com.bd/image/cache/catalog/earphone/apple/airpods-pro/airpods-pro-1-500x500.jpg"
+        },
+        {
+            "id": 6,
+            "name": "iPad Pro",
+            "description": "Apple iPad Pro 2020 edition",
+            "price": 799,
+            "color": "#F73984",
+            "image": "https://www.gizmochina.com/wp-content/uploads/2020/03/Apple-iPad-Pro-12.9-2020-500x500.jpg"
+        },
+        {
+            "id": 7,
+            "name": "Galaxy S21 Ultra",
+            "description": "Samsung Galaxy S21 Ultra 2021 edition",
+            "price": 1299,
+            "color": "#1C1C1C",
+            "image": "https://www.gizmochina.com/wp-content/uploads/2020/11/Samsung-Galaxy-S21-Ultra-5G-500x500.jpg"
+        },
+        {
+            "id": 8,
+            "name": "Galaxy S21",
+            "description": "Samsung Galaxy S21 2021 edition",
+            "price": 899,
+            "color": "#7C95EB",
+            "image": "https://www.gizmochina.com/wp-content/uploads/2020/12/1-12-500x500.jpg"
+        }
+    ]
+}
