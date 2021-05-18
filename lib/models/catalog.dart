@@ -1,5 +1,5 @@
 class Item {
-  final String id;
+  final int id;
   final String name;
   final String description;
   final num price;
@@ -15,13 +15,15 @@ class Item {
       this.image});
 }
 
-final products = [
-  Item(
-      id: "CodePur001",
-      name: "iPhone 12 Pro",
-      description: "Apple iPhone 12th generation",
-      price: 999,
-      color: "#33505A",
-      image:
-          "https://m-cdn.phonearena.com/images/phones/80751-940/Apple-iPhone-12-Pro.jpg")
-];
+class CatalogModel {
+  static final items = [
+    Item(
+        id: 1,
+        name: "iPhone 12 Pro",
+        description: "Apple iPhone 12th generation",
+        price: 999,
+        color: "#33505A",
+        image:
+            "https://m-cdn.phonearena.com/images/phones/80751-940/Apple-iPhone-12-Pro.jpg")
+  ];
+}

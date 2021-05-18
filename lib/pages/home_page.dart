@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mtechviral/models/catalog.dart';
 import 'package:mtechviral/widgets/drawer.dart';
+import 'package:mtechviral/widgets/item_widget.dart';
 
 class HomePage extends StatelessWidget {
   final int days = 30;
@@ -7,6 +9,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dummyList = List.generate(20, (index) => CatalogModel.items[0]);
     return Scaffold(
         appBar: AppBar(
             brightness:
@@ -14,33 +17,14 @@ class HomePage extends StatelessWidget {
                     ? Brightness.light
                     : null,
             title: Text('Catalog App')),
-        body: Center(
-          child: Container(
-            child: Text('Welcome to $days days of flutter by $name'),
-          ),
-        ),
-        drawer: MyDrawer());
-  }
-
-  // ! Methods
-
-  bringVagetables() {
-    //without any parameter
-  }
-
-  bringVagetables2(int rupies) {
-    //with parameter that is required
-  }
-
-  bringVagetables3({int rupies}) {
-    //with parameter that is optional
-  }
-
-  bringVagetables4({int rupies = 50, bool isThalia = false}) {
-    //with parameter that is optional with pre defined values
-  }
-
-  bringVagetables5({int rrupies = 50, @required bool isThalia}) {
-    //with parameter that is optional with pre defined values and one is required to give when call
+        drawer: MyDrawer(),
+        body: ListView.builder(
+          itemCount: dummyList.length,
+          itemBuilder: (context, index) {
+            return ItemWidget(
+              item: dummyList[index],
+            );
+          },
+        ));
   }
 }
