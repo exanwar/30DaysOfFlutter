@@ -4,6 +4,7 @@ import 'package:mtechviral/pages/home_page.dart';
 import 'package:mtechviral/pages/login_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mtechviral/utils/routes.dart';
+import 'package:mtechviral/widgets/themes.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -36,12 +37,10 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
 
       //For Light Theme
-      theme: ThemeData(
-          primarySwatch: Colors.deepPurple,
-          fontFamily: GoogleFonts.lato().fontFamily),
+      theme: MyTheme.lightTheme(context),
 
       //for Dark Theme Mode
-      darkTheme: ThemeData(brightness: Brightness.dark),
+      darkTheme: MyTheme.darkTheme(context),
       initialRoute: MyRoutes.homeRoute,
       routes: {
         MyRoutes.loginRoute: (context) => LoginPage(),

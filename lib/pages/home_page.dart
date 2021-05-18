@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
             brightness:
                 (MediaQuery.of(context).platformBrightness == Brightness.dark)
                     ? Brightness.light
-                    : Brightness.dark,
+                    : null,
             title: Text('Catalog App')),
         body: Center(
           child: Container(
