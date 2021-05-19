@@ -38,24 +38,58 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-            brightness:
-                (MediaQuery.of(context).platformBrightness == Brightness.dark)
-                    ? Brightness.light
-                    : null,
-            title: Text('Catalog App')),
-        drawer: MyDrawer(),
-        body: (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
-            ? ListView.builder(
+      appBar: AppBar(
+          brightness:
+              (MediaQuery.of(context).platformBrightness == Brightness.dark)
+                  ? Brightness.light
+                  : null,
+          title: Text('Catalog App')),
+      drawer: MyDrawer(),
+      // body: (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
+      //     ? ListView.builder(
+      //         itemCount: CatalogModel.items.length,
+      //         itemBuilder: (context, index) {
+      //           return ItemWidget(
+      //             item: CatalogModel.items[index],
+      //           );
+      //         },
+      //       )
+      //     : Center(
+      //         child: CircularProgressIndicator(),
+      //
+      //     )
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
+            ? GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    mainAxisSpacing: 16,
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 16),
                 itemCount: CatalogModel.items.length,
                 itemBuilder: (context, index) {
-                  return ItemWidget(
-                    item: CatalogModel.items[index],
-                  );
-                },
-              )
+                  final item = CatalogModel.items[index];
+                  return Card(
+                      clipBehavior: Clip.antiAlias,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      child: GridTile(
+                        header: Container(
+                          child: Text(
+                            item.name,
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          padding: const EdgeInsets.all(12),
+                          decoration: BoxDecoration(color: Colors.deepPurple),
+                        ),
+                        child: Image.network(item.image),
+                        footer: Text(item.price.toString()),
+                      ));
+                })
             : Center(
                 child: CircularProgressIndicator(),
-              ));
+              ),
+      ),
+    );
   }
 }
